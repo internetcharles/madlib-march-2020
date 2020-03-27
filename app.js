@@ -4,6 +4,7 @@
 const myInputContainer = document.getElementById('input-container');
 const madLibContainer = document.getElementById('madlib-container');
 const myButton = document.getElementById('button');
+const resetButton = document.getElementById('reset-button');
 
 const input1Span = document.getElementById('input1-span');
 const input2Span = document.getElementById('input2-span');
@@ -22,7 +23,24 @@ const input14Span = document.getElementById('input14-span');
 const input15Span = document.getElementById('input15-span');
 const input16Span = document.getElementById('input16-span');
 
-// function list
+// inputs placed here
+const inputOne = document.getElementById('input1');
+const inputTwo = document.getElementById('input2');
+const inputThree = document.getElementById('input3');
+const inputFour = document.getElementById('input4');
+const inputFive = document.getElementById('input5');
+const inputSix = document.getElementById('input6');
+const inputSeven = document.getElementById('input7');
+const inputEight = document.getElementById('input8');
+const inputNine = document.getElementById('input9');
+const inputTen = document.getElementById('input10');
+const inputEleven = document.getElementById('input11');
+const inputTwelve = document.getElementById('input12');
+const inputThirteen = document.getElementById('input13');
+const inputFourteen = document.getElementById('input14');
+const inputFifteen = document.getElementById('input15');
+const inputSixteen = document.getElementById('input16');
+
 
 // function fills span w/ input value
 function fillMadLib() {
@@ -63,32 +81,31 @@ function fillMadLib() {
     madLibContainer.style.display = 'block';
 }
 
-// inputs placed here
-const inputOne = document.getElementById('input1');
-const inputTwo = document.getElementById('input2');
-const inputThree = document.getElementById('input3');
-const inputFour = document.getElementById('input4');
-const inputFive = document.getElementById('input5');
-const inputSix = document.getElementById('input6');
-const inputSeven = document.getElementById('input7');
-const inputEight = document.getElementById('input8');
-const inputNine = document.getElementById('input9');
-const inputTen = document.getElementById('input10');
-const inputEleven = document.getElementById('input11');
-const inputTwelve = document.getElementById('input12');
-const inputThirteen = document.getElementById('input13');
-const inputFourteen = document.getElementById('input14');
-const inputFifteen = document.getElementById('input15');
-const inputSixteen = document.getElementById('input16');
+//function resets page and inputs
 
+function resetMadLib() {
 
-// spans go here for insertion
-
-// mad lib container goes here
-
-// input container goes here
-
-// button logic (event listener)
+    myInputContainer.style.display = 'block';
+    madLibContainer.style.display = 'none';
+    
+    document.getElementById('input1').value = '';
+    document.getElementById('input2').value = '';
+    document.getElementById('input3').value = '';
+    document.getElementById('input4').value = '';
+    document.getElementById('input5').value = '';
+    document.getElementById('input6').value = '';
+    document.getElementById('input7').value = '';
+    document.getElementById('input8').value = '';
+    document.getElementById('input9').value = '';
+    document.getElementById('input10').value = '';
+    document.getElementById('input11').value = '';
+    document.getElementById('input12').value = '';
+    document.getElementById('input13').value = '';
+    document.getElementById('input14').value = '';
+    document.getElementById('input15').value = '';
+    document.getElementById('input16').value = '';
+}
 
 // add event listener to the button on the click event
 myButton.addEventListener('click', fillMadLib);
+resetButton.addEventListener('click', resetMadLib);
